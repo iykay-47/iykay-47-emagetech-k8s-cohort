@@ -270,8 +270,6 @@ useradd -g ap…   4.36kB         buildkit.dockerfile.v0
 
 ## 6. One trade-off I had to make
 
-(2–4 sentences. Pick **one** decision where the slides offered multiple options and you had to choose: alpine vs slim vs distroless, USER 1000 vs `useradd app`, healthcheck via python vs installing curl, etc. Explain why you chose what you chose and what you'd give up by picking the other.)
-
 While alpine and distroless offer smaller images and more security, the slim image makes up for it with maximum compatibility and ease of testing app workability with low coding knowledge.
 
 Thinking now, Distroless should be used during runtime while slim should be used during build as this setup maximizes their strength and resuces their weaknesses drastically.
