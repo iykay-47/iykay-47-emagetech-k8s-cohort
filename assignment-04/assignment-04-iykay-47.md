@@ -1,4 +1,4 @@
-# Assignment 04 — <Ike>
+# Assignment 04 — Ike
 
 **GitHub username: iykay-47**
 
