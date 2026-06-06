@@ -396,8 +396,10 @@ drwxr-xr-x  3 ike  ike  4.0K Apr 11  2025  aws
 
 ## 5. One trade-off I had to make
 
-(2–4 sentences. Pick **one** decision where the slides offered multiple options and you had to choose: named volume vs bind mount for the db, host network mode vs `-p`, compose vs raw docker commands, etc. Explain why you chose what you chose and what you'd give up by picking the other.)
+Using `-p` DNAT port mapping over host. While using `host` offers minimal lag when accessing data, it also goes againt the entire idea of why containers were created "isolation". Port mapping might increase lag time, it also gives the host fredon to map various services to various ports without exposing thos ports to the container. this reduces vulnerability layers for potential attacks.
+
+Also Compose seems to be the better choice for more granular control of bulk docker resource creation, ease of resource creation and management and ease of editing commands without retyping entire commands and adhoc scripts.
 
 ## 6. One thing I'm still unsure about
 
-(One sentence. Goes to office hours.)
+If docker has a hard-coded protocal to designating subnets and ip address. And which layer of linux networking primitives docker uses to retain stopped container ips and the volume of container restarts it will require to see a change in ips. 
